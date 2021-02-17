@@ -4,9 +4,7 @@ const Widget = styled.div`
 margin-top: 24px;
 margin-bottom: 24px;
 border: 1px solid ${({ theme }) => theme.colors.primary};
-background-color: ${({ theme }) => {
-    return theme.colors.mainBg;
-}};
+background-color: ${({ theme }) => theme.colors.mainBg};
 border-radius: 4px;
 overflow: hidden;
 
@@ -25,6 +23,16 @@ p{
 }
 `;
 
+Widget.ButtonQuiz = styled.button`
+background-color: orange;
+color: white;
+width: 100%;
+margin-top: 30px;
+    &:hover{
+        background-color: green;
+    }
+`;
+
 Widget.Header = styled.header`
 display: flex;
 justify-content: flex-start;
@@ -38,17 +46,21 @@ background-color: ${({ theme }) => theme.colors.primary};
 `;
 
 Widget.Content = styled.div`
-padding: 24px 32px 32px 32px;
-& > *:first-child{
-  margin-top: 0;
-}
-& > *:last-child{
-  margin-bottom: 0;
-}
-ul{
-  list-style: none;
-  padding: 0;
-}
+    padding: 24px 32px 32px 32px;
+    & > *:first-child{
+    margin-top: 0;
+    }
+    & > *:last-child{
+    margin-bottom: 0;
+    }
+    ul{
+    list-style: none;
+    padding: 0;
+    }
+    input{
+        width: 100%;
+        padding: 0px 10px;
+    }
 `;
 
 export default Widget;
